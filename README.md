@@ -16,38 +16,39 @@ In order to make use of these functions, P-Vision is supported by the P96 RTG sy
 * Fast **16-bit PCMCIA interface**
 	* 3.5 MB/s on Amiga 600
 	* 9.5 MB/s on Amiga 1200
-
-* **Zorro II** card for **Amiga 2000 / 3000 /4000** computers, or compatible bus boards.
-* **Standard RCA** stereo output, **192kHz @24-bit**.
-* **TOSLINK** optical output, supporting **48kHz, 96kHz & 192kHz @24-bit**.
-* **3x analogue audio inputs** (PAULA, CD-ROM, EXTERNAL), sampled at **192kHz @24-bit**.
-* **High-quality digital mixer** which operates at full **192kHz @24-bit** resolution.
-* **AHI stream interface**, supporting **8-/16- & 24-bit** modes for playback and recording.
-* **MP3/OGG/FLAC/WMA** hardware decoder **(VLSI VS1063)**, enhanced by a powerful DMA stream buffer.
-* **32 channel wavetable engine** - featuring <ins>per voice</ins>:
-  * **8-/16-bit** sample support, **192kHz @24-bit** mixing rate.
-  * Sample start, stop and loop pointer for effective **one-shot or continuous playback modes**.
-  * **32-bit** sample phase accumulators for **extra fine grained pitch definition**.
-  * Optional **sample interpolation** for smooth sounds.
-  * Channel independent **left / right stereo panning**.
-  * Hardware **ADSR evelope generator**.
-* **32 MB on-board sample memory** - ready to be used for **Multichannel Sample Tracking** or **MIDI**.
-* **Flash-based mixer settings** which are automatically loaded on start-up.
+* Digital video output interface
+	* **8, 16 and 32-bit** color modes
+	* Wide range of supported display resolutions **(12-85MHz)**, supporting **Full-HD** resolution
+	* 64x64 hardware sprite
+	* Pixel-wise smooth scrolling
+	* Programmable **display processor** for flexible display context management and synchronisation
+* 32 MB video memory
+	* 200 MHz yielding up to **360 MB/s** total memory bandwidth
+	* Hardware **memory paging** support for MMU equipped Amigas
+	* **4 MB VRAM** for non-MMU equipped Amigas
+* 64-bit hardware BitBlt engine
+	* 90 MHz, up to **360 Mio pix/s**
+	* Fast rectangular copy blits, up to 32767x32767 pixels in size
+	* Logical function unit with pixel and color bit masking support
+	* 16x16 mono pattern with color expansion & direct host interface for dithering and text rendering
 * **Upgradable FPGA Core** via **JTAG**, or **Amiga-based flash tool**.
-* **Open Hardware** - Gerbers and FPGA Bitstream <ins>freely available</ins>.
-  
+* **Open Hardware** - Gerbers and FPGA Bitstream <ins>freely available</ins> **after May 17th, 2027**.	
+
 ### _Minimum Amiga Configuration_
-* Amiga 2000
-* 68000 @7.09MHz
+* Amiga 600
+* 68EC020 @14MHz
 * 1 MB Chip / 4 MB Fast
-* OS 1.3
+* OS 3.1
+* P96 V3.3.0
+
 ### _Recommended Amiga Configuration_
-* Amiga 2000 / 3000 / 4000
+* Amiga 1200
 * 68030 @25Mhz
 * 2 MB Chip / 16 MB Fast
-* OS 3.9 or 3.2.2
+* OS 3.9 or 3.2.x
+* P96 V3.6.2
   
-## AmiGUS Parts & Function Overview
+## P-Vision Parts & Function Overview
 <img src=\Media\Pics\PCB_Outline.png width="1000">
 The above diagram shows all relevant ports and components of the AmiGUS card.
 
@@ -77,64 +78,42 @@ The above diagram shows all relevant ports and components of the AmiGUS card.
 |**CDROM Input**| Internal connector for connecting a CDROM drive to the AmiGUS.|
 |**EXTERNAL Input**| External line-in jack to mix or capture any sound source.|
 
-## How to Build your AmiGUS
-Here you find all materials to build your own personal AmiGUS card. Most soldering parts have been chosen so that you can build the card, even if you have novice soldering skills. If you are unsure, we recommend to either contact a person who is trustworthy and has the required soldering skills, or buy the card from one of our resellers.
+## How to Build your P-Vision
+The exclusive rights to manufacture and sell P-Vision PCBs has been exclusively granted to Alinea Computer for one year, ending on May 17th, 2027. During this time, you can purchase fully assembled P-Vision units or P-Vision PCBs for your own assembly. After expiration, the P-Vision PCB files will be released under Creative Commons license for everyone to build.
+
 ### _PCB Data_
+
+### _Will be released on May 17th, 2027_
+
 | File  | Description |
 |-|-|
-|[Download](https://github.com/necronomfive/AmiGUS-pub/raw/main/PCB/Gerbers/Version_13/250909_Amigus_PCB.zip) | PCB manufacturing files |
 |[Download](https://github.com/necronomfive/AmiGUS-pub/raw/main/PCB/BOM/AmiGUS_BOM_Rev13.xlsx)| BOM for all components and Mouser references (if available) |
-|[Download](https://github.com/necronomfive/AmiGUS-pub/tree/main/PCB/Schematics/AmiGUS_Schematics_V13.pdf) | AmiGUS card schematics. |
 
-In terms of PCB manufacturing, both PCBWAY and JLPCB were able to produce functional boards during our prototyping phase. 
-It is recommended that you specify either chamfering or beveling for the slot edge connector in order to prevent mechanical damage to the Zorro slots.
-
-### _Slot Bracket Data_
-| File  | Description |
-|-|-|
-|[Download](https://github.com/necronomfive/AmiGUS-pub/tree/main/Documentation/Datasheets/AmiGUS_Bracket.pdf) | AmiGUS slot bracket holes. |
-
-## AmiGUS Software
+## P-Vision Software
 ### _FPGA Core Firmware_
 
-Firmware release can be found [here.](https://github.com/necronomfive/AmiGUS-pub/tree/main/FPGA/Releases/)
+Firmware release can be found [here.](https://github.com/necronomfive/P-Vision_pub/tree/main/FPGA/Releases/)
 
-The [Quartus folder](https://github.com/necronomfive/AmiGUS-pub/tree/main/FPGA/Releases/Quartus) contains .pof files for Altera's Quartus software.
-These are needed for the initial bring-up of self-made AmiGUS cards especially.
+The [Quartus folder](https://github.com/necronomfive/P-Vision_pub/tree/main/FPGA/Releases/Quartus) contains .pof files for Altera's Quartus software.
+These are needed for the initial bring-up of self-made P-Vision cards especially.
 
-The [Amiga .upd files](https://github.com/necronomfive/AmiGUS-pub/tree/main/FPGA/Releases/Amiga) can be flashed using the AmiGUS Flash & Configuration tool.
-
-The AmiGUS Flash tool and the latest .upd file are part of the software release package for your Amiga.
-
-### _Base Software and Drivers_
-
-AmiGUS base software and driver packages can be found in the [release section](https://github.com/necronomfive/AmiGUS-pub/releases) as lha archives or adf images.
-
-## Audio Samples
-These demo files have been generated by direct digital stream capture from the AmiGUS, and then downconverted to 44.1kHz MP3.
-
-| File  | Description |
-| ------------- | ------------- |
-| [Example 1](https://github.com/necronomfive/AmiGUS-pub/raw/main/Media/MP3s/AmiGUS_MOD_NoInterpolation.mp3?raw=true)  | Amiga MOD standard playback on AmiGUS |
-| [Example 2](https://github.com/necronomfive/AmiGUS-pub/raw/main/Media/MP3s/AmiGUS_MOD_WithInterpolation.mp3?raw=true)  | Amiga MOD playback using interpolation on AmiGUS |
-| [Example 3](https://github.com/necronomfive/AmiGUS-pub/raw/main/Media/MP3s/AmiGUS_S3M_WithInterpolation.mp3?raw=true)  | S3M playback using interpolation on AmiGUS |
-| [Example 4](https://github.com/necronomfive/AmiGUS-pub/raw/main/Media/MP3s/AmiGUS_Sample.mp3?raw=true)  | MIDI instrument played using all 32 channels |
+The [Amiga .upd files](https://github.com/necronomfive/P-Vision_pub/tree/main/FPGA/Releases/Amiga) can be flashed using the P-Vision Flash tool.
 
 ## Supported Resellers
 <img src=\Media\Pics\alinealogo.png width="500">
 
 ## Links
-Here you will find links to other projects which support AmiGUS.
+Here you will find links to the software components needed to use the P-Vision
 | Link  | Description |
 | ------------- | ------------- |
-| [amigaos-AmiGUS](https://github.com/christoph-fassbach/amigaos-AmiGUS) | Driver development project for AmiGUS.|
-| [HippoPlayer](https://github.com/koobo/HippoPlayer) | Music player which has preliminary AmiGUS support. |
+| [P96 RTG System](https://icomp.de) | P96 RTG software.|
+| [P-Vision Driver](https://aminet.net) | P-Vision driver for P96. |
 
 ## Licensing
-### _AmiGUS Printed Circuit Board_
+### _P-Vision Printed Circuit Board_
 [![CC BY-NC-ND 4.0][cc-by-nc-nd-shield]][cc-by-nc-nd]\
-AmiGUS PCB\
-Copyright (C) 2025 by Oliver Achten
+P-Vision PCB\
+Copyright (C) 2026 by Oliver Achten
 
 This work is licensed under a
 [Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License][cc-by-nc-nd].
@@ -145,10 +124,10 @@ This work is licensed under a
 [cc-by-nc-nd-image]: https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png
 [cc-by-nc-nd-shield]: https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg
 
-### _AmiGUS Base Software_
+### _P-Vision Tools_
 
-AmiGUS Base Software\
-Copyright (C) 2025 by Oliver Achten
+P-Vision Tools\
+Copyright (C) 2026 by Oliver Achten
 
 These programs are free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -163,46 +142,18 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with these programs.  If not, see <http://www.gnu.org/licenses/>.
 
-### _AmiGUS AHI Driver_
+### _P-Vision P96 Driver_
 
 AmiGUS AHI Driver\
-Copyright (C) 2025 by Christoph Faßbach
+Copyright (C) 2026 by Thomas Richter
 
-AmiGUS.audio driver is free software: you can redistribute it and/or modify
-it under the terms of the GNU Lesser General Public License as published by
-the Free Software Foundation, version 3 of the License only.
 
-AmiGUS.audio driver is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-See the GNU Lesser General Public License for more details.
-
-You should have received a copy of the GNU Lesser General Public License
-along with AmiGUS.audio driver. If not, see <http://www.gnu.org/licenses/>.
-
-### _AmiGUS MHI Driver_
-
-AmiGUS MHI Driver\
-Copyright (C) 2025 by Christoph Faßbach
-
-mhiamigus.library is free software: you can redistribute it and/or modify
-it under the terms of the GNU Lesser General Public License as published by
-the Free Software Foundation, version 3 of the License only.
-
-mhiamigus.library is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-See the GNU Lesser General Public License for more details.
-
-You should have received a copy of the GNU Lesser General Public License
-along with mhiamigus.library. If not, see <http://www.gnu.org/licenses/>.
 
 ## Credits / Thanks
 * **Oliver Achten** - product idea, concept, PCB design, FPGA logic, docs, base software
-* **Christoph Faßbach** - AHI & MHI driver framework
-* **Simon Neumann & Torsten Hees** - AmiGUS prototype production coordination & support
-* **Thomas Ziegert** - AmiGUS bracket redesign & production
-* **Henryk Richter** - EaglePlayer support, lots of suggestions ;-)
-* **Kari-Pekka Koljonen** - lots of help for HippoPlayer support
-* **Greg Donner** - AmiGUS manual proofreading
-* **Oliver Eschbach** - AmiGUS AmigaGuide link testing
+* **Thomas Richter** - P-Vision driver & technical advisor
+* **Simon Neumann & Torsten Hees** - P-Vision prototype production coordination & support
+* **Kymon Zonias** - Being a great guy and lots of moral support! ;-)
+* **José Manuel Menéndez** - P-Vision case design
+* **Oliver Renz de Font** - P-Vision case manufacturing & technical advisor
+
