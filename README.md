@@ -1,17 +1,22 @@
 # Welcome to P-Vision!
 <img src=\Media\Pics\Title.png width="1000">
 
-**AmiGUS** is a modern high quality sound card for the Amiga. It was designed to provide the right combination of accelerated hardware and software features to bring the full multimedia experience to all Amiga users. 
+**P-Vision** is a graphics card for Amiga 600/1200 computers, which can be plugged into the PCMCIA port of your Amiga. It features a digital video output which can be directly connected to modern displays and television sets.
 
-By supporting established frameworks such as **AHI** and **MHI**, we ensure that the card is compatible to a wide range of already existing applications. In addition, the card's true power lies in its highly sophisticated wavetable engine, which provides a powerful feature upgrade to PAULA, supporting 32 true hardware voices using 32 MB of sample memory.
+The design of P-Vision features all of the functions you expect from an Amiga graphics card, including 32-bit true color graphics, a programmable display processor handling multiple screen contexts and a fast 64-bit hardware accelerated BitBlt engine supporting copy, pattern fill and color expansion functions.
 
-The good news is that, in order to use these features, you don't need a fast CPU. **AmiGUS** can be used on **ALL** Amigas with a free Zorro Slot, since all of the computational heavy-lifting is performed by the hardware acclerated functions on the card.
+Designed for the PCMCIA port, you are free to use the **P-Vision** with your already existing hardware set-up, significantly extending the scope of applications with existing 68020/030/040/060 accelerator cards.
 
-And since we are at it right now, you can own an **AmiGUS** too, either by buying it from one of our **supported resellers**, or you just download the card's design files provided here and **build one on your own!**
+In order to make use of these functions, P-Vision is supported by the P96 RTG system, sold by Individual Computers.
 
-### _Let the Amiga sound revolution begin now!_
+### _P-Vision enables RTG for ALL Amiga 600/1200 users!_
 
-## AmiGUS Feature List
+## P-Vision Feature List
+
+* Fast **16-bit PCMCIA interface**
+	* 3.5 MB/s on Amiga 600
+	* 9.5 MB/s on Amiga 1200
+
 * **Zorro II** card for **Amiga 2000 / 3000 /4000** computers, or compatible bus boards.
 * **Standard RCA** stereo output, **192kHz @24-bit**.
 * **TOSLINK** optical output, supporting **48kHz, 96kHz & 192kHz @24-bit**.
