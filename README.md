@@ -98,7 +98,7 @@ Here you will find links to the software components needed to use the P-Vision
 | Link  | Description |
 | ------------- | ------------- |
 | [P96 RTG System](https://icomp.de) | P96 RTG software.|
-| [P-Vision Driver]([https://aminet.net/driver/video/pVision.lha]) | P-Vision driver for P96. |
+| [P-Vision Driver](https://aminet.net/driver/video/pVision.lha) | P-Vision driver for P96. |
 
 ## Licensing
 ### _P-Vision Printed Circuit Board_
