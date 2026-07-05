@@ -107,7 +107,7 @@ Here you will find links to the software components needed to use the P-Vision
 | Link  | Description |
 | ------------- | ------------- |
 | [P96 RTG System](https://icomp.de) | P96 RTG software.|
-| [P-Vision Driver](https://aminet.net) | P-Vision driver for P96. |
+| [P-Vision Driver]([https://aminet.net/driver/video/pVision.lha]) | P-Vision driver for P96. |
 
 ## Licensing
 ### _P-Vision Printed Circuit Board_
@@ -144,9 +144,7 @@ along with these programs.  If not, see <http://www.gnu.org/licenses/>.
 
 ### _P-Vision P96 Driver_
 
-AmiGUS AHI Driver\
-Copyright (C) 2026 by Thomas Richter
-
+Please consult the pVision.readme file from [https://aminet.net/driver/video/pVision.lha] .
 
 
 ## Credits / Thanks
