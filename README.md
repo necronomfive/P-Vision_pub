@@ -56,7 +56,7 @@ The above diagram shows all relevant ports and components of the P-Vision card.
 
 |**P-Vision User Manual**|
 |-|
-|[Download](https://github.com/necronomfive/AmiGUS-pub/tree/main/Documentation/AmiGUS/AmiGUS_User_Manual.pdf)|
+|[Download](https://github.com/necronomfive/AmiGUS-pub/tree/main/Documentation/P-Vision/P-Vision_User_Manual.pdf)|
 
 |Part|Function| Documentation|
 |-|-|-|
