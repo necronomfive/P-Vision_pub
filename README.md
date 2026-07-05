@@ -60,14 +60,14 @@ The above diagram shows all relevant ports and components of the P-Vision card.
 
 |Part|Function| Documentation|
 |-|-|-|
-|**Altera 10M25 FPGA**| Main processing unit, receives and generates digital audio streams in 192kHz |[Register Map](https://github.com/necronomfive/P-Vision_pub/raw/main/Documentation/P-Vision/P-Vision_Register_Map.xlsx)|
-|**32MB SDRAM**| Memory for sample storage, clocked at 122.2MHz  | [Datasheet](https://github.com/necronomfive/P-Vision_pub/tree/main/Documentation/Datasheets/42_45S83200J_16160J-462626.pdf)  |
+|**Altera 10M25 FPGA**| All image processing functions are implemented in this device. |[Register Map](https://github.com/necronomfive/P-Vision_pub/raw/main/Documentation/P-Vision/P-Vision_Register_Map.xlsx)|
+|**32MB SDRAM**| Memory for all display output and graphics processing.  | [Datasheet](https://github.com/necronomfive/P-Vision_pub/tree/main/Documentation/Datasheets/42_45S83200J_16160J-462626.pdf)  |
 
 ### _List of ports_
 |Port|Function|
 |-|-|
-|**PCMCIA**| Optical output to sound system, supports up to 96kHz @20-bit. |
-|**Digital Video Output**| Stereo output via RCA jacks at 192kHz @24-bit. |
+|**PCMCIA**| Connects to either an Amiga 600 or Amiga 1200 computer. Please do note that this card does not support hot-plugging. |
+|**Digital Video Output**| Connects to a modern digital monitor or television providing a high resolution, true color video output. |
 
 ## How to Build your P-Vision
 The exclusive rights to manufacture and sell P-Vision PCBs has been exclusively granted to Alinea Computer for one year, ending on May 17th, 2027. During this time, you can purchase fully assembled P-Vision units or P-Vision PCBs for your own assembly. After expiration, the P-Vision PCB files will be released under Creative Commons license for everyone to build.
@@ -135,12 +135,11 @@ along with these programs.  If not, see <http://www.gnu.org/licenses/>.
 
 ### _P-Vision P96 Driver_
 
-Please consult the pVision.readme file from [https://aminet.net/driver/video/pVision.lha] .
-
+Please consult the pVision.readme file from https://aminet.net/driver/video/pVision.lha .
 
 ## Credits / Thanks
 * **Oliver Achten** - product idea, concept, PCB design, FPGA logic, docs, base software
-* **Thomas Richter** - P-Vision driver & technical advisor
+* **Thomas Richter** - P-Vision P96 driver & technical advisor on the Blitter design
 * **Simon Neumann & Torsten Hees** - P-Vision prototype production coordination & support
 * **Kymon Zonias** - Being a great guy and lots of moral support! ;-)
 * **José Manuel Menéndez** - P-Vision case design
