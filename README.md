@@ -15,7 +15,7 @@ In order to make use of these functions, P-Vision is supported by the P96 RTG sy
 
 * Fast **16-bit PCMCIA interface**
 	* 3.5 MB/s on Amiga 600
-	* 9.5 MB/s on Amiga 1200
+	* Up to 9.5 MB/s on Amiga 1200
 * Digital video output interface
 	* **8, 16 and 32-bit** color modes
 	* Wide range of supported display resolutions **(12-85MHz)**, supporting **Full-HD** resolution
@@ -50,33 +50,24 @@ In order to make use of these functions, P-Vision is supported by the P96 RTG sy
   
 ## P-Vision Parts & Function Overview
 <img src=\Media\Pics\PCB_Outline.png width="1000">
-The above diagram shows all relevant ports and components of the AmiGUS card.
+The above diagram shows all relevant ports and components of the P-Vision card.
 
 ### _List of Components_
 
-|**AmiGUS User Manual**|
+|**P-Vision User Manual**|
 |-|
 |[Download](https://github.com/necronomfive/AmiGUS-pub/tree/main/Documentation/AmiGUS/AmiGUS_User_Manual.pdf)|
 
 |Part|Function| Documentation|
 |-|-|-|
-|**Altera 10M08 FPGA**| Main processing unit, receives and generates digital audio streams in 192kHz |[Register Map](https://github.com/necronomfive/AmiGUS-pub/raw/main/Documentation/AmiGUS/AmiGUS_Register_Map.xlsx)|
-|**32MB SDRAM**| Memory for sample storage, clocked at 122.2MHz  | [Datasheet](https://github.com/necronomfive/AmiGUS-pub/tree/main/Documentation/Datasheets/42_45S83200J_16160J-462626.pdf)  |
-|**VS1063 Decoder**| Decoder chip from VLSI, supports MP3,OGG and FLAC  | [Datasheet](https://github.com/necronomfive/AmiGUS-pub/tree/main/Documentation/Datasheets/vs1063ds.pdf) [HW Guide](https://github.com/necronomfive/AmiGUS-pub/tree/main/Documentation/Datasheets/vs1063hg.pdf) |
-|**PCM1862 ADC**| Analogue to digital coverter, captures audtio from all external inputs @192kHz, 24-bit| [Datasheet](https://github.com/necronomfive/AmiGUS-pub/tree/main/Documentation/Datasheets/pcm1862.pdf) |
-|**PCM1794 DAC**| Digital to analogue converter, outputs final mixing result @192kHz 24-bit  | [Datasheet](https://github.com/necronomfive/AmiGUS-pub/tree/main/Documentation/Datasheets/pcm1794a.pdf) |
-|**ZORRO II Bus**| AmiGUS supports Zorro II, non-DMA I/O accesses.| [Zorro Spec](https://github.com/necronomfive/AmiGUS-pub/tree/main/Documentation/Datasheets/zorro3.pdf) |
+|**Altera 10M25 FPGA**| Main processing unit, receives and generates digital audio streams in 192kHz |[Register Map](https://github.com/necronomfive/P-Vision_pub/raw/main/Documentation/P-Vision/P-Vision_Register_Map.xlsx)|
+|**32MB SDRAM**| Memory for sample storage, clocked at 122.2MHz  | [Datasheet](https://github.com/necronomfive/P-Vision_pub/tree/main/Documentation/Datasheets/42_45S83200J_16160J-462626.pdf)  |
 
 ### _List of ports_
 |Port|Function|
 |-|-|
-|**TOSLINK**| Optical output to sound system, supports up to 96kHz @20-bit. |
-|**Analogue Output**| Stereo output via RCA jacks at 192kHz @24-bit. |
-|**JTAG Port**| FPGA programming interface, Altera USB blaster compatible. |
-|**Expansion Port**| Digital output of final mix, can be input to other cards. |
-|**PAULA Input**| Internal connector for mixing PAULA sound to AmiGUS output.|
-|**CDROM Input**| Internal connector for connecting a CDROM drive to the AmiGUS.|
-|**EXTERNAL Input**| External line-in jack to mix or capture any sound source.|
+|**PCMCIA**| Optical output to sound system, supports up to 96kHz @20-bit. |
+|**Digital Video Output**| Stereo output via RCA jacks at 192kHz @24-bit. |
 
 ## How to Build your P-Vision
 The exclusive rights to manufacture and sell P-Vision PCBs has been exclusively granted to Alinea Computer for one year, ending on May 17th, 2027. During this time, you can purchase fully assembled P-Vision units or P-Vision PCBs for your own assembly. After expiration, the P-Vision PCB files will be released under Creative Commons license for everyone to build.
