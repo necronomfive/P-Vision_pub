@@ -56,11 +56,11 @@ The above diagram shows all relevant ports and components of the P-Vision card.
 
 |**P-Vision User Manual**|
 |-|
-|[Download](https://github.com/necronomfive/AmiGUS-pub/tree/main/Documentation/P-Vision/P-Vision_User_Manual.pdf)|
+|[Download](https://github.com/necronomfive/P-Vision_pub/tree/main/Documentation/P-Vision/P-Vision_User_Manual.pdf)|
 
 |Part|Function| Documentation|
 |-|-|-|
-|**Altera 10M25 FPGA**| All image processing functions are implemented in this device. |[Register Map](https://github.com/necronomfive/P-Vision_pub/raw/main/Documentation/P-Vision/P-Vision_Register_Map.xlsx)|
+|**Altera 10M25 FPGA**| All image processing functions are implemented in this device. |[Register Map](https://github.com/necronomfive/P-Vision_pub/tree/main/Documentation/P-Vision/P-Vision_Register_Map.xlsx)|
 |**32MB SDRAM**| Memory for all display output and graphics processing.  | [Datasheet](https://github.com/necronomfive/P-Vision_pub/tree/main/Documentation/Datasheets/42_45S83200J_16160J-462626.pdf)  |
 
 ### _List of ports_
@@ -74,11 +74,7 @@ The exclusive rights to manufacture and sell P-Vision PCBs has been exclusively 
 
 ### _PCB Data_
 
-### _Will be released on May 17th, 2027_
-
-| File  | Description |
-|-|-|
-|[Download](https://github.com/necronomfive/AmiGUS-pub/raw/main/PCB/BOM/AmiGUS_BOM_Rev13.xlsx)| BOM for all components and Mouser references (if available) |
+### _Will be released on May 17th, 2027
 
 ## P-Vision Software
 ### _FPGA Core Firmware_
