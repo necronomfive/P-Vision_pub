@@ -60,7 +60,7 @@ The above diagram shows all relevant ports and components of the P-Vision card.
 
 |Part|Function| Documentation|
 |-|-|-|
-|**Altera 10M25 FPGA**| All image processing functions are implemented in this device. |[Register Map](https://github.com/necronomfive/P-Vision_pub/tree/main/Documentation/P-Vision/P-Vision_Register_Map.xlsx)|
+|**Altera 10M25 FPGA**| All image processing functions are implemented in this device. |[Register Map](https://github.com/necronomfive/P-Vision_pub/raw/main/Documentation/P-Vision/P-Vision_Register_Map.xlsx)|
 |**32MB SDRAM**| Memory for all display output and graphics processing.  | [Datasheet](https://github.com/necronomfive/P-Vision_pub/tree/main/Documentation/Datasheets/42_45S83200J_16160J-462626.pdf)  |
 
 ### _List of ports_
