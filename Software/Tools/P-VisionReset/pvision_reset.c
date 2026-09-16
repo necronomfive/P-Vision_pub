@@ -70,7 +70,9 @@ void resetPCMCIA(void)
 	UWORD regval, dummy, i;
 	
 	// This code works on both Amiga 600 / 1200
+	
 	// AmigaOS "card.resource" uses the wrong Gayle reset register, which only works on Amiga 600
+	// Therefore, the root-cause of the so-called Amiga 1200 "Gayle hardware bug" is actually a software issue
 	
 	regval = ReadReg16(0xda9000, 0);		// Get actual state
 	
